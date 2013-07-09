@@ -1,7 +1,10 @@
 require 'sinatra'
+require "bundler/setup"
+
+set :haml, :format => :html5
 
 get '/' do
-  "Hello World! We are getting married!"
+  haml :index
 end
 
 get '/alice' do
@@ -16,30 +19,7 @@ get '/bridesmaids/:name' do |n|
   "Hello #{n}! This is your bio"
 end
 
-get 'groomsmen/:name' do |n|
+get '/groomsmen/:name' do |n|
   "Hello #{n}! This is your bio"
 end
 
-get '/bridesmaids/maya' do
-
-end
-
-get '/bridesmaids/gladys' do
-
-end
-
-get '/bridesmaids/ivy' do
-
-end
-
-get '/groomsmen/michael' do
-
-end
-
-get '/groomsmen/peter' do
-
-end
-
-get '/groomsmen/tam' do
-
-end
