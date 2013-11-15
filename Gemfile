@@ -5,3 +5,7 @@ ruby '2.0.0'
 gem 'sinatra'
 gem 'thin'
 gem 'haml'
+gem 'shotgun'
+gem 'pg'
+gem "activerecord"
+gem "sinatra-activerecord"
