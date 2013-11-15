@@ -25,3 +25,7 @@ get '/groomsmen/:name' do |n|
   "Hello #{n}! This is your bio"
 end
 
+get '/rsvp' do
+  @guests = Guest.all
+  haml :rsvp
+end
