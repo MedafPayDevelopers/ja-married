@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './config/environments'
 require './models/guest'
+require 'json'
+require 'sinatra/form_helpers'
 
 set :haml, format: :html5
 
@@ -28,4 +30,20 @@ end
 get '/rsvp' do
   @guests = Guest.all
   haml :rsvp
+end
+
+post '/rsvp_action' do
+  puts params.inspect
+
+end
+
+
+get '/guests.?:format?' do
+  content_type :json
+
+  puts params.inspect
+  @guests = Guest.as_you_type(params[:guest_name]).collect{|x| [name: x.name, id: x.id, plus_one: x.plus_one_allowed]}
+
+  {matchingGuests: @guests.flatten}.to_json
+
 end

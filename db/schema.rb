@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131115085919) do
+ActiveRecord::Schema.define(version: 20131115111123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20131115085919) do
   create_table "guests", force: true do |t|
     t.string  "name"
     t.boolean "plus_one_allowed"
+    t.boolean "plus_one_confirmed"
     t.string  "plus_one_name"
     t.boolean "rsvp_ed"
   end

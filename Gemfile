@@ -9,3 +9,5 @@ gem 'shotgun'
 gem 'pg'
 gem "activerecord"
 gem "sinatra-activerecord"
+gem "json"
+gem 'sinatra-formhelpers'
