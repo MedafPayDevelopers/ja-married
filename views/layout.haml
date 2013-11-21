@@ -1,0 +1,31 @@
+!!!
+%html{lang: "en"}
+  %head
+    %script{src: "http://code.jquery.com/jquery-1.10.1.min.js", type: "text/javascript"}
+    %script{src: "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js", type: "text/javascript"}
+
+    %link{href: "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css", rel: "stylesheet"}
+
+    %link{href: "/style.css", rel: "stylesheet"}
+    %link{href: "/css/bootstrap.min.css", rel: "stylesheet"}
+    %link{href: "/css/bootstrap-theme.min.css", rel: "stylesheet"}
+
+
+  %body
+    - if flash[:notice]
+      .well.well-small= flash[:notice]
+
+    .navigation_headers
+      %ul.navigation_header_items.nav.nav-tabs
+        %li.navigation_item
+          %a{href: url('/')} home
+        %li.navigation_item
+          %a{href: url('/venue')} venue
+        %li.navigation_item
+          %a{href: url('/wedding_party')} wedding_party
+        %li.navigation_item
+          %a{href: url('/our_story')} our_story
+        %li.navigation_item
+          %a{href: url('/rsvp')} RSVP
+
+    = yield

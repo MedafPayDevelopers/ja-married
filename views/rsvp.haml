@@ -1,71 +1,59 @@
-!!!
-%html
-  %head
-    %script{src: "http://code.jquery.com/jquery-1.10.1.min.js", type: "text/javascript"}
-    %script{src: "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js", type: "text/javascript"}
+%form.new_rsvp_form.form-horizontal{action: "/rsvp_action", method: "POST"}
+  %input#guest_id{name: "guest[id]", type: "hidden"}
+  %div.form-group
+    %label{for: "guest_name"} Your Name
+    %input#guest_name{name: "guest[name]", type: "text"}
+  %div#can_plus_one.form-group.hidden
+    .checkbox
+      %label
+        %input#guest_has_plus_one{name: "guest[has_plus_one]", type: "checkbox"}
+        +1?
+  %div#plus_one_name.form-group.hidden
+    %input#guest_plus_one_name{name: "guest[plus_one_name]", type: "text"}
+  %div#submit_form.form-group
+    %button.btn.btn-default{type: "submit", name: "submit", disabled: 'disabled'} RSVP
 
-    %link{href: "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css", rel: "stylesheet"}
-    %link{href: "/style.css", rel: "stylesheet"}
+:javascript
+  $(document).ready(function() {
 
-    :javascript
-      $(document).ready(function() {
-
-        $(function() {
-          $( "#name" ).autocomplete({
-            source: function( request, response ) {
-              $.ajax({
-                url: "/guests",
-                dataType: "json",
-                data: { guest_name: request.term },
-                success: function( data ) {
-                  response( $.map( data.matchingGuests, function( item ) {
-                    return {
-                      label: item.name,
-                      value: item.name,
-                      id: item.id,
-                      plus_one: item.plus_one,
-                    }
-                  }));
+    $(function() {
+      $( "#guest_name" ).autocomplete({
+        source: function( request, response ) {
+          $.ajax({
+            url: "/guests",
+            dataType: "json",
+            data: { guest_name: request.term },
+            success: function( data ) {
+              response( $.map( data.matchingGuests, function( item ) {
+                return {
+                  label: item.name,
+                  value: item.name,
+                  id: item.id,
+                  plus_one: item.plus_one,
                 }
-              });
-            },
-            minLength: 2,
-            select: function( event, ui ) {
-              $("input#guest_name").val(ui.item.value);
-              $("input#guest_id").val(ui.item.id);
-              if (ui.item.plus_one) {
-                $("span#plus_one_allowed").show();
-              }
-            },
-            open: function() {
-              $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
-            },
-            close: function() {
-              $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+              }));
             }
           });
-        });
-
-        $("input#guest_plus_one_allowed_true").change(function(event) {
-          $("span#plus_one_name").show();
-        });
-
+        },
+        minLength: 2,
+        select: function( event, ui ) {
+          $("input#guest_id").val(ui.item.id);
+          if (ui.item.plus_one) {
+            $("div#can_plus_one").removeClass('hidden');
+          }
+          $('div#submit_form button').removeAttr('disabled');
+        },
+        open: function() {
+          $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+        },
+        close: function() {
+          $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+        }
       });
+    });
 
-  %body
-    RSVP page coming soon!
+    $("input#guest_has_plus_one").change(function(event) {
+      $("div#plus_one_name").removeClass('hidden');
+    });
 
-    .ui-widget
-      %label{for: "name"} Your name:
-      %input#name
-
-= form('/rsvp_action', :post)
-= hidden(:guest, :id)
-= input(:guest, :name, {readonly: 'readonly'})
-%span#plus_one_allowed.hidden
-  = checkbox(:guest, :plus_one_allowed, true, {label: ""})
-  = label(:guest, :plus_one_allowed, "+1?")
-%span#plus_one_name.hidden
-  = input(:guest, :plus_one_name)
-
-= submit
+  });
