@@ -17,23 +17,24 @@
 
     %div.main_layout
 
-      %div.rsvp_section
-        %a.rsvp_link{href: url('/rsvp')}
-          = "RSVP  TODAY!"
+      %div.main_header
+        %div.rsvp_section
+          %a.rsvp_link{href: url('/rsvp')}
+            = "RSVP  TODAY!"
 
-      .navigation_headers
-        %ul.navigation_header_items.nav.nav-tabs
-          %li.navigation_item.home
-            %a{href: url('/')} home
-          %li.navigation_item
-            %a{href: url('/our_story')} OUR STORY
-          %li.navigation_item
-            %a{href: url('/proposal')} THE PORPOSAL
-          %li.navigation_item
-            %a{href: url('/our_bio')} OUR BIO
-          %li.navigation_item
-            %a{href: url('/wedding_party')} GROOSMEN/BRIDESMAIDS
-          %li.navigation_item
-            %a{href: url('/venue')} CEREMONY & VENUE INFO
+        .navigation_headers
+          %ul.navigation_header_items.nav.nav-tabs
+            %li.navigation_item.home
+              %a{href: url('/')} home
+            %li.navigation_item
+              %a{href: url('/our_story')} OUR STORY
+            %li.navigation_item
+              %a{href: url('/proposal')} THE PORPOSAL
+            %li.navigation_item
+              %a{href: url('/our_bio')} OUR BIO
+            %li.navigation_item
+              %a{href: url('/wedding_party')} GROOSMEN/BRIDESMAIDS
+            %li.navigation_item
+              %a{href: url('/venue')} CEREMONY & VENUE INFO
 
       = yield

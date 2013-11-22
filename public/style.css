@@ -6,6 +6,7 @@ body {
 h1, h2, h3, h4 {
   margin-top: 0 !important;
 }
+
 a {
   color: #797979 !important;
 }
@@ -24,7 +25,7 @@ a.rsvp_link:hover {
 }
 
 div.main_layout {
-  min-height: 800px;
+  min-height: 850px;
   width: 1115px;
   margin-left: auto;
   margin-right: auto;
@@ -34,13 +35,22 @@ div.main_layout {
 
 div.main_content {
   background-color: #48b5b1;
-  min-height: 600px;
+  min-height: 750px;
 }
+
+div.main_content_white {
+  min-height: 750px;
+  background-color: white;
+}
+
+div.main_header {
+}
+
 
 div.navigation_headers {
   padding-left: 5%;
   padding-right: 5%;
-  background-color: #bbbbbb;
+  background-color: #cccccc;
 }
 
 ul.navigation_header_items {
@@ -53,10 +63,22 @@ li.navigation_item {
   font-size: 18px;
 }
 
+li.navigation_item.home {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image:url('image/home.png');
+  width:21px;
+  height:18px;
+  margin-top: 15px;
+}
+
+
+
 div.rsvp_section {
   padding-top: 5px;
   padding-bottom: 8px;
-  background-color: #bbbbbb;
+  background-color: #cccccc;
 }
 
 a.rsvp_link {
@@ -73,25 +95,79 @@ a.rsvp_link {
   margin-left: 85%;
 }
 
-li.navigation_item.home {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image:url('image/home.png');
-  width:21px;
-  height:18px;
-  margin-top: 15px;
+img.the_proposal_banner {
+  float:right;
+  width: 45%;
 }
+div.the_proposal_content {
+  width: 45%;
+  float:left;
+}
+
 
 div.our_story_content {
   float:right;
   width: 45%;
 }
 
-div.our_story {
-  color:white;
-  padding: 60px 5% 30px 5%;
+div.our_story, div.the_proposal, div.our_bio {
+  color: white;
+  padding: 50px 5% 30px 5%;
 }
+
+div.our_bio {
+  color: #797979;
+  font-size: 13px;
+  font-family: "arial",serif;
+
+}
+
+div.our_bio_jimmy {
+  float:left;
+  width: 36%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 70px;
+  padding: 15px;
+  height: 550px;
+  -moz-box-shadow: 0 0 10px 5px #eee;
+  -webkit-box-shadow: 0 0 10px 5px#eee;
+  box-shadow: 0 0 10px 5px #eee;
+}
+
+div.our_bio_alice {
+  float:left;
+  width: 36%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 70px;
+  padding: 15px;
+  height: 550px;
+  -moz-box-shadow: 0 0 5px 5px #eee;
+  -webkit-box-shadow: 0 0 5px 5px#eee;
+  box-shadow: 0 0 5px 5px #eee;
+}
+
+h4.our_bio_title {
+  border-bottom: thin dotted #cccccc;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-left: 120px;
+  margin-bottom: 30px;
+}
+
+img.jimmy_bio {
+  position: absolute;
+  left: 70px;
+  top: 155px;
+}
+
+img.alice_bio {
+  position: absolute;
+  left: 530px;
+  top: 155px;
+}
+
 
 img.home_page_banner {
   padding: 60px 5%;
