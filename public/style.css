@@ -1,3 +1,86 @@
+body {
+  font-size: 18px;
+  font-family: "oswald",monospace;
+}
+
+a {
+  color: #797979 !important;
+}
+
+a:hover {
+  color: #797979 !important;
+}
+
+a.rsvp_link {
+  color: white !important;
+}
+
+a.rsvp_link:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+
+div.main_layout {
+  min-height: 100%;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+
+div.navigation_headers {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+ul.navigation_header_items {
+  width: 1200px;
+}
+
+li.navigation_item {
+  margin-right: 1.25%;
+  font-size: 18px;
+}
+
+div.rsvp_section {
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
+a.rsvp_link {
+  color: white;
+  padding: 10px 25px 10px 25px;
+  background-color: #48b5b1;
+  width: 150px;
+  -webkit-border-bottom-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-left: 79%;
+}
+
+li.navigation_item.home {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image:url('image/home.png');
+  width:21px;
+  height:18px;
+  margin-top: 15px;
+}
+
+div.main_content {
+  background-color: #48b5b1;
+}
+
+img.home_page_banner {
+  padding: 60px 5%;
+}
+
 form.new_rsvp_form {
   margin-left: 20px;
 }

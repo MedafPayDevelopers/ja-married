@@ -15,17 +15,25 @@
     - if flash[:notice]
       .well.well-small= flash[:notice]
 
-    .navigation_headers
-      %ul.navigation_header_items.nav.nav-tabs
-        %li.navigation_item
-          %a{href: url('/')} home
-        %li.navigation_item
-          %a{href: url('/venue')} venue
-        %li.navigation_item
-          %a{href: url('/wedding_party')} wedding_party
-        %li.navigation_item
-          %a{href: url('/our_story')} our_story
-        %li.navigation_item
-          %a{href: url('/rsvp')} RSVP
+    %div.main_layout
 
-    = yield
+      %div.rsvp_section
+        %a.rsvp_link{href: url('/rsvp')}
+          = "RSVP  TODAY!"
+
+      .navigation_headers
+        %ul.navigation_header_items.nav.nav-tabs
+          %li.navigation_item.home
+            %a{href: url('/')} home
+          %li.navigation_item
+            %a{href: url('/our_story')} OUR STORY
+          %li.navigation_item
+            %a{href: url('/proposal')} THE PORPOSAL
+          %li.navigation_item
+            %a{href: url('/our_bio')} OUR BIO
+          %li.navigation_item
+            %a{href: url('/wedding_party')} GROOSMEN/BRIDESMAIDS
+          %li.navigation_item
+            %a{href: url('/venue')} CEREMONY & VENUE INFO
+
+      = yield
