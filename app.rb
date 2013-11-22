@@ -23,6 +23,17 @@ get '/our_story' do
   haml :our_story
 end
 
+get '/proposal' do
+  haml :proposal
+end
+
+
+get '/our_bio' do
+  haml :our_bio
+end
+
+
+
 get '/venue' do
   haml :venue
 end
