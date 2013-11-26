@@ -5,13 +5,15 @@ require './models/guest'
 require 'json'
 require 'sinatra/form_helpers'
 require 'rack-flash'
-set :haml, format: :html5
+require 'sinatra/partial'
 
+set :haml, format: :html5
+enable :partial_underscores
 
 use Rack::Session::Cookie, key: 'rack.session',
                            domain: 'heroku.com',
                            path: '/',
-                           expire_after: 2592000, # In seconds
+                           expire_after: 2592000,
                            secret: 'ja-is-getting-married-so-we-need-a-secret-token'
 use Rack::Flash
 
@@ -27,12 +29,9 @@ get '/proposal' do
   haml :proposal
 end
 
-
 get '/our_bio' do
   haml :our_bio
 end
-
-
 
 get '/venue' do
   haml :venue
@@ -41,7 +40,6 @@ end
 get '/wedding_party' do
   haml :wedding_party
 end
-
 
 get '/rsvp' do
   haml :rsvp
@@ -60,7 +58,6 @@ post '/rsvp_action' do
   flash[:notice] = "Thank you for RSVPing! We look forward to seeing you."
   redirect '/rsvp'
 end
-
 
 get '/guests.?:format?' do
   content_type :json

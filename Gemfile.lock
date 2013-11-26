@@ -43,6 +43,8 @@ GEM
       activerecord (>= 3.0)
       sinatra (~> 1.0)
     sinatra-formhelpers (0.4.0)
+    sinatra-partial (0.4.0)
+      sinatra
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -65,4 +67,5 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-formhelpers
+  sinatra-partial
   thin

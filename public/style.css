@@ -1,28 +1,22 @@
 body {
   font-size: 18px;
-  font-family: "oswald",monospace;
+  font-family: "oswald", monospace;
 }
 
 h1, h2, h3, h4 {
   margin-top: 0 !important;
 }
 
-a {
+a, a:hover {
   color: #797979 !important;
 }
 
-a:hover {
-  color: #797979 !important;
-}
-
-a.rsvp_link {
-  color: white !important;
-}
-
-a.rsvp_link:hover {
+a.rsvp_link, a.rsvp_link:hover {
   color: white !important;
   text-decoration: none;
 }
+
+
 
 div.main_layout {
   min-height: 850px;
@@ -30,20 +24,21 @@ div.main_layout {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  background-color:black;
+  background-color: #222222;
 }
 
 div.main_content {
   background-color: #48b5b1;
   min-height: 750px;
+  color: white;
+  padding: 50px 5% 30px 5%;
 }
 
 div.main_content_white {
   min-height: 750px;
   background-color: white;
-}
-
-div.main_header {
+  color: #797979;
+  padding: 50px 5% 30px 5%;
 }
 
 
@@ -55,21 +50,32 @@ div.navigation_headers {
 
 ul.navigation_header_items {
   width: 1115px;
-  border: none;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 li.navigation_item {
   margin-right: 1.25%;
   font-size: 18px;
+
+  display: inline;
+  list-style-type: none;
 }
 
-li.navigation_item.home {
+li.navigation_item a {
+  padding: 10px 15px;
+}
+
+
+li.home {
+  display: inline-block;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
   background-image:url('image/home.png');
-  width:21px;
-  height:18px;
+  width: 21px;
+  height: 18px;
   margin-top: 15px;
 }
 
@@ -83,69 +89,30 @@ div.rsvp_section {
 
 a.rsvp_link {
   color: white;
-  padding: 10px 25px 10px 25px;
+  padding: 10px 25px;
   background-color: #48b5b1;
   width: 150px;
+  margin-left: 85%;
   -webkit-border-bottom-right-radius: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -moz-border-radius-bottomright: 15px;
   -moz-border-radius-bottomleft: 15px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  margin-left: 85%;
-}
-
-img.the_proposal_banner {
-  float:right;
-  width: 45%;
-}
-div.the_proposal_content {
-  width: 45%;
-  float:left;
 }
 
 
-div.our_story_content {
-  float:right;
-  width: 45%;
-}
-
-div.our_story, div.the_proposal, div.our_bio {
-  color: white;
-  padding: 50px 5% 30px 5%;
-}
-
-div.our_bio {
-  color: #797979;
+div.our_bio_box {
   font-size: 13px;
-  font-family: "arial",serif;
+  font-family: "arial", serif;
 
-}
-
-div.our_bio_jimmy {
-  float:left;
   width: 36%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 70px;
+  margin: 70px 5% 0 5%;
   padding: 15px;
   height: 550px;
   -moz-box-shadow: 0 0 10px 5px #eee;
   -webkit-box-shadow: 0 0 10px 5px#eee;
   box-shadow: 0 0 10px 5px #eee;
-}
-
-div.our_bio_alice {
-  float:left;
-  width: 36%;
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 70px;
-  padding: 15px;
-  height: 550px;
-  -moz-box-shadow: 0 0 5px 5px #eee;
-  -webkit-box-shadow: 0 0 5px 5px#eee;
-  box-shadow: 0 0 5px 5px #eee;
 }
 
 h4.our_bio_title {
@@ -156,21 +123,31 @@ h4.our_bio_title {
   margin-bottom: 30px;
 }
 
-img.jimmy_bio {
+img.jimmy_bio, img.michael_bio, img.peter_bio, img.tam_bio {
   position: absolute;
   left: 70px;
   top: 155px;
 }
 
-img.alice_bio {
+img.alice_bio, img.maya_bio, img.gladys_bio, img.ivy_bio {
   position: absolute;
-  left: 530px;
+  left: 610px;
   top: 155px;
 }
 
+a.left_navigate_link span {
+  background-image:url('image/arrow-left.png');
+  width: 10px;
+  height: 39px;
+}
 
-img.home_page_banner {
-  padding: 60px 5%;
+div.right_navigate {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image:url('image/arrow-right.png');
+  width: 10px;
+  height: 39px;
 }
 
 form.new_rsvp_form {

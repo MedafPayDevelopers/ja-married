@@ -1,0 +1,6 @@
+- class_names ||= ''
+
+%div{class: "our_bio_box #{class_names}"}
+  %img{src: "/image/#{name}-bio.png", class: "#{name}_bio"}
+  %h4.our_bio_title= name.upcase
+  = description

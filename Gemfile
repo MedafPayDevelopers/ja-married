@@ -12,3 +12,4 @@ gem "sinatra-activerecord"
 gem "json"
 gem 'sinatra-formhelpers'
 gem 'rack-flash3'
+gem 'sinatra-partial'

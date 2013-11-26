@@ -13,7 +13,7 @@
 
   %body
     - if flash[:notice]
-      .well.well-small= flash[:notice]
+      .alert.alert-success= flash[:notice]
 
     %div.main_layout
 
@@ -23,8 +23,8 @@
             = "RSVP  TODAY!"
 
         .navigation_headers
-          %ul.navigation_header_items.nav.nav-tabs
-            %li.navigation_item.home
+          %ul.navigation_header_items
+            %li.home
               %a{href: url('/')} home
             %li.navigation_item
               %a{href: url('/our_story')} OUR STORY
@@ -33,7 +33,7 @@
             %li.navigation_item
               %a{href: url('/our_bio')} OUR BIO
             %li.navigation_item
-              %a{href: url('/wedding_party')} GROOSMEN/BRIDESMAIDS
+              %a{href: url('/wedding_party')} GROOMSMEN/BRIDESMAIDS
             %li.navigation_item
               %a{href: url('/venue')} CEREMONY & VENUE INFO
 
