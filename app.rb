@@ -10,6 +10,7 @@ require 'sinatra/partial'
 set :haml, format: :html5
 enable :partial_underscores
 
+
 use Rack::Session::Cookie, key: 'rack.session',
                            domain: 'heroku.com',
                            path: '/',

@@ -1,17 +1,21 @@
-%form.new_rsvp_form.form-horizontal{action: "/rsvp_action", method: "POST"}
-  %input#guest_id{name: "guest[id]", type: "hidden"}
-  %div.form-group
-    %label{for: "guest_name"} Your Name
-    %input#guest_name{name: "guest[name]", type: "text"}
-  %div#can_plus_one.form-group.hidden
-    .checkbox
-      %label
-        %input#guest_has_plus_one{name: "guest[has_plus_one]", type: "checkbox"}
-        +1?
-  %div#plus_one_name.form-group.hidden
-    %input#guest_plus_one_name{name: "guest[plus_one_name]", type: "text"}
-  %div#submit_form.form-group
-    %button.btn.btn-default{type: "submit", name: "submit", disabled: 'disabled'} RSVP
+%div.main_content.rsvp
+
+  .new_rsvp_form
+    %h3= "RSVP"
+    %form.form-horizontal{action: "/rsvp_action", method: "POST"}
+      %input#guest_id{name: "guest[id]", type: "hidden"}
+      %div.form-group#name
+        %label{for: "guest_name"} NAME
+        %input#guest_name{name: "guest[name]", type: "text", size: 46}
+      %div#can_plus_one.form-group.hidden
+        .checkbox
+          %input#guest_has_plus_one{name: "guest[has_plus_one]", type: "checkbox"}
+          +1?
+      %div#plus_one_name.form-group.hidden
+        %label{for: "plus_one_name"} +1 NAME
+        %input#guest_plus_one_name{name: "guest[plus_one_name]", type: "text", size: 44}
+      %div#submit_form.form-group
+        %input{alt: "Submit", src: "image/submit-btn.png", type: "image", disabled: 'disabled'}
 
 :javascript
   $(document).ready(function() {
@@ -41,7 +45,7 @@
           if (ui.item.plus_one) {
             $("div#can_plus_one").removeClass('hidden');
           }
-          $('div#submit_form button').removeAttr('disabled');
+          $('div#submit_form input').removeAttr('disabled');
         },
         open: function() {
           $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );

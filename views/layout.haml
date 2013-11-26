@@ -12,6 +12,8 @@
 
 
   %body
+    - puts '!'*100
+    - puts flash.inspect
     - if flash[:notice]
       .alert.alert-success= flash[:notice]
 

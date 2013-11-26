@@ -45,6 +45,9 @@ div.yellow {
   color: #443c30;
 }
 
+div.rsvp {
+  background-image:url('image/bg-rsvp.jpg');
+}
 
 div.navigation_headers {
   padding-left: 5%;
@@ -184,6 +187,66 @@ div.venue_info h4 {
 }
 
 
-form.new_rsvp_form {
-  margin-left: 20px;
+div.new_rsvp_form {
+  width: 40%;
+  padding: 20px;
+  margin: 20% 35%;
+  background-color:rgba(40,40,40,0.6);
+  color: white;
+}
+
+div.new_rsvp_form #name label {
+  background-color: #48b5b1;
+  padding: 1px 3px;
+  margin-right: -3px;
+}
+
+div.new_rsvp_form #plus_one_name label {
+  background-color: #48b5b1;
+  padding: 1px 1px;
+  margin-right: -3px;
+}
+
+div.new_rsvp_form input {
+  border-style: none;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+}
+
+div.new_rsvp_form #name, div.new_rsvp_form #plus_one_name {
+  margin: 5px 0;
+}
+
+div.new_rsvp_form #can_plus_one {
+  margin-bottom: 0;
+}
+
+div.new_rsvp_form #can_plus_one .checkbox {
+  padding-top: 0;
+}
+
+div.new_rsvp_form #can_plus_one {
+  margin-left: 86%;
+}
+
+div.new_rsvp_form #submit_form {
+  margin-left: 75%;
+  margin-top: 5%;
+}
+
+
+div.new_rsvp_form h3 {
+  margin: 0 !important;
 }
