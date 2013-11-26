@@ -10,10 +10,9 @@
     %link{href: "/css/bootstrap.min.css", rel: "stylesheet"}
     %link{href: "/css/bootstrap-theme.min.css", rel: "stylesheet"}
 
+    %title= "JA - Welcome to Our Wedding"
 
   %body
-    - puts '!'*100
-    - puts flash.inspect
     - if flash[:notice]
       .alert.alert-success= flash[:notice]
 

@@ -29,8 +29,6 @@ GEM
     multi_json (1.8.2)
     pg (0.17.0)
     rack (1.5.2)
-    rack-flash3 (1.0.5)
-      rack
     rack-protection (1.5.0)
       rack
     shotgun (0.9)
@@ -42,9 +40,13 @@ GEM
     sinatra-activerecord (1.2.3)
       activerecord (>= 3.0)
       sinatra (~> 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sinatra-formhelpers (0.4.0)
     sinatra-partial (0.4.0)
       sinatra
+    sinatra-redirect-with-flash (0.2.0)
+      sinatra (>= 1.0.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -62,10 +64,11 @@ DEPENDENCIES
   haml
   json
   pg
-  rack-flash3
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra-flash
   sinatra-formhelpers
   sinatra-partial
+  sinatra-redirect-with-flash
   thin

@@ -4,19 +4,13 @@ require './config/environments'
 require './models/guest'
 require 'json'
 require 'sinatra/form_helpers'
-require 'rack-flash'
+require 'sinatra/flash'
+require 'sinatra/redirect_with_flash'
 require 'sinatra/partial'
 
 set :haml, format: :html5
 enable :partial_underscores
-
-
-use Rack::Session::Cookie, key: 'rack.session',
-                           domain: 'heroku.com',
-                           path: '/',
-                           expire_after: 2592000,
-                           secret: 'ja-is-getting-married-so-we-need-a-secret-token'
-use Rack::Flash
+enable :sessions
 
 get '/' do
   haml :index
@@ -56,8 +50,7 @@ post '/rsvp_action' do
   guest = Guest.find_by_id(guest_id)
   guest.update_attributes(guest_params)
 
-  flash[:notice] = "Thank you for RSVPing! We look forward to seeing you."
-  redirect '/rsvp'
+  redirect '/rsvp', notice: 'Thank you for RSVPing! We look forward to seeing you.'
 end
 
 get '/guests.?:format?' do
