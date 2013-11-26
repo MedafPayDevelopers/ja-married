@@ -5,6 +5,7 @@ body {
 
 h1, h2, h3, h4 {
   margin-top: 0 !important;
+  margin-bottom: 30px !important;
 }
 
 a, a:hover {
@@ -28,17 +29,20 @@ div.main_layout {
 }
 
 div.main_content {
-  background-color: #48b5b1;
   min-height: 750px;
+  background-color: #48b5b1;
   color: white;
   padding: 50px 5% 30px 5%;
 }
 
-div.main_content_white {
-  min-height: 750px;
+div.white {
   background-color: white;
   color: #797979;
-  padding: 50px 5% 30px 5%;
+}
+
+div.yellow {
+  background-color: #f8ec94;
+  color: #443c30;
 }
 
 
@@ -66,7 +70,6 @@ li.navigation_item {
 li.navigation_item a {
   padding: 10px 15px;
 }
-
 
 li.home {
   display: inline-block;
@@ -102,6 +105,7 @@ a.rsvp_link {
 }
 
 
+
 div.our_bio_box {
   font-size: 13px;
   font-family: "arial", serif;
@@ -135,20 +139,50 @@ img.alice_bio, img.maya_bio, img.gladys_bio, img.ivy_bio {
   top: 155px;
 }
 
-a.left_navigate_link span {
+a.left_navigate_link div {
   background-image:url('image/arrow-left.png');
   width: 10px;
   height: 39px;
 }
 
-div.right_navigate {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+a.right_navigate_link div {
   background-image:url('image/arrow-right.png');
   width: 10px;
   height: 39px;
 }
+
+a.left_navigate_link, a.right_navigate_link {
+  position: absolute;
+  top: 500px;
+}
+
+a.right_navigate_link.groomsmen {
+  left: 500px;
+}
+
+a.left_navigate_link.bridesmaids {
+  left: 600px;
+}
+
+a.right_navigate_link.bridesmaids {
+  left: 1050px;
+}
+
+div.venue_map {
+  background-color: #443c30;
+  padding: 3px;
+}
+
+div.venue_info {
+  background-color: #443c30;
+  color: white;
+  padding: 15px;
+}
+
+div.venue_info h4 {
+  margin-bottom: 10px !important;
+}
+
 
 form.new_rsvp_form {
   margin-left: 20px;
