@@ -1,15 +1,12 @@
-body {
-  font-size: 18px;
-  font-family: "oswald", monospace;
-}
-
 h1, h2, h3, h4 {
   margin-top: 0 !important;
   margin-bottom: 30px !important;
+  font-family: "Oswald", monospace !important;
 }
 
 a, a:hover {
   color: #797979 !important;
+  text-decoration: none !important;
 }
 
 a.rsvp_link, a.rsvp_link:hover {
@@ -19,20 +16,82 @@ a.rsvp_link, a.rsvp_link:hover {
 
 
 
+
 div.main_layout {
   min-height: 850px;
-  width: 1115px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
   background-color: #222222;
 }
 
+div.rsvp_section {
+  padding: 5px 0;
+  background-color: #f0f0f0;
+}
+
+a.rsvp_link {
+  padding: 10px 25px;
+  background-color: #48b5b1;
+  width: 150px;
+  margin-left: 82%;
+  -webkit-border-bottom-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+div.navigation_headers {
+  background-color: #f0f0f0;
+}
+
+ul.navigation_header_items {
+  padding-bottom: 5px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+li.navigation_item {
+  margin-right: 7%;
+  font-size: 18px;
+  font-family: "Oswald", monospace;
+  display: inline;
+  height: 20px;
+  list-style-type: none;
+}
+
+li.navigation_item.selected {
+  border-bottom: thick solid #cccccc;
+}
+
+li.home {
+  display: inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image:url('image/home.png');
+  width: 21px;
+  height: 18px;
+  margin-top: 15px;
+  margin-right: 2.5%;
+}
+
+
+
+
+
+
 div.main_content {
   min-height: 750px;
+  width: 90%;
+
+  padding: 50px 5% 30px 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.green {
   background-color: #48b5b1;
   color: white;
-  padding: 50px 5% 30px 5%;
 }
 
 div.white {
@@ -47,65 +106,12 @@ div.yellow {
 
 div.rsvp {
   background-image:url('image/bg-rsvp.jpg');
-}
-
-div.navigation_headers {
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #cccccc;
-}
-
-ul.navigation_header_items {
-  width: 1115px;
-  padding-bottom: 10px;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-li.navigation_item {
-  margin-right: 1.25%;
-  font-size: 18px;
-
-  display: inline;
-  list-style-type: none;
-}
-
-li.navigation_item a {
-  padding: 10px 15px;
-}
-
-li.home {
-  display: inline-block;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image:url('image/home.png');
-  width: 21px;
-  height: 18px;
-  margin-top: 15px;
+  background-repeat: no-repeat;
 }
 
 
 
-div.rsvp_section {
-  padding-top: 5px;
-  padding-bottom: 8px;
-  background-color: #cccccc;
-}
 
-a.rsvp_link {
-  color: white;
-  padding: 10px 25px;
-  background-color: #48b5b1;
-  width: 150px;
-  margin-left: 85%;
-  -webkit-border-bottom-right-radius: 15px;
-  -webkit-border-bottom-left-radius: 15px;
-  -moz-border-radius-bottomright: 15px;
-  -moz-border-radius-bottomleft: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
 
 
 
@@ -114,7 +120,9 @@ div.our_bio_box {
   font-family: "arial", serif;
 
   width: 36%;
-  margin: 70px 5% 0 5%;
+  margin-top: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
   padding: 15px;
   height: 550px;
   -moz-box-shadow: 0 0 10px 5px #eee;
@@ -122,58 +130,72 @@ div.our_bio_box {
   box-shadow: 0 0 10px 5px #eee;
 }
 
+div.bio_box {
+
+}
+
+div.bio_box div.our_bio_box {
+  height: 400px;
+  margin-top: 70px;
+  margin-left: 40px;
+  margin-right: 0px;
+  width: 100%;
+}
+
 h4.our_bio_title {
   border-bottom: thin dotted #cccccc;
   padding-bottom: 10px;
   padding-top: 20px;
-  margin-left: 120px;
-  margin-bottom: 30px;
+  display:inline;
 }
 
 img.jimmy_bio, img.michael_bio, img.peter_bio, img.tam_bio {
-  position: absolute;
-  left: 70px;
-  top: 155px;
+  margin-top: -110px;
+  margin-left: -50px;
+  margin-bottom: 15px;
 }
 
 img.alice_bio, img.maya_bio, img.gladys_bio, img.ivy_bio {
-  position: absolute;
-  left: 610px;
-  top: 155px;
+  margin-top: -110px;
+  margin-left: -50px;
+  margin-bottom: 15px;
 }
 
 a.left_navigate_link div {
   background-image:url('image/arrow-left.png');
-  width: 10px;
-  height: 39px;
+  width: 31px;
+  height: 31px;
+  margin-top: 280px;
+  float:left;
 }
 
 a.right_navigate_link div {
   background-image:url('image/arrow-right.png');
-  width: 10px;
-  height: 39px;
+  width: 31px;
+  height: 31px;
+  margin-top: 280px;
+  float: right;
 }
 
-a.left_navigate_link, a.right_navigate_link {
-  position: absolute;
-  top: 500px;
+a.left_navigate_link.groomsmen div {
+  margin-left: -10px;
 }
 
-a.right_navigate_link.groomsmen {
-  left: 500px;
+a.right_navigate_link.groomsmen div {
+  margin-right: -90px;
 }
 
-a.left_navigate_link.bridesmaids {
-  left: 600px;
+a.left_navigate_link.bridesmaids div {
+  margin-left: -10px;
 }
 
-a.right_navigate_link.bridesmaids {
-  left: 1050px;
+a.right_navigate_link.bridesmaids div {
+  margin-right: -90px;
 }
 
 div.venue_map {
   background-color: #443c30;
-  padding: 3px;
+  padding: 3%;
 }
 
 div.venue_info {
@@ -222,7 +244,6 @@ div.new_rsvp_form input {
   -moz-border-radius-topleft: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-
 }
 
 div.new_rsvp_form #name, div.new_rsvp_form #plus_one_name {

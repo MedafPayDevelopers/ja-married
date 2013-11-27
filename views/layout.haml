@@ -5,6 +5,7 @@
     %script{src: "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js", type: "text/javascript"}
 
     %link{href: "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css", rel: "stylesheet"}
+    %link{href: "http://fonts.googleapis.com/css?family=Oswald", rel: "stylesheet", type: 'text/css'}
 
     %link{href: "/style.css", rel: "stylesheet"}
     %link{href: "/css/bootstrap.min.css", rel: "stylesheet"}
@@ -16,27 +17,26 @@
     - if flash[:notice]
       .alert.alert-success= flash[:notice]
 
-    %div.main_layout
+    %div{class: "main_layout #{@background}"}
 
-      %div.main_header
-        %div.rsvp_section
-          %a.rsvp_link{href: url('/rsvp')}
-            = "RSVP  TODAY!"
+      %div.rsvp_section
+        %a.rsvp_link{href: url('/rsvp')}
+          = "RSVP  TODAY!"
 
-        .navigation_headers
-          %ul.navigation_header_items
-            %li.home
-              %a{href: url('/')}
-                %div= 'home'
-            %li.navigation_item
-              %a{href: url('/our_story')} OUR STORY
-            %li.navigation_item
-              %a{href: url('/proposal')} THE PORPOSAL
-            %li.navigation_item
-              %a{href: url('/our_bio')} OUR BIO
-            %li.navigation_item
-              %a{href: url('/wedding_party')} GROOMSMEN/BRIDESMAIDS
-            %li.navigation_item
-              %a{href: url('/venue')} CEREMONY & VENUE INFO
+      .navigation_headers
+        %ul.navigation_header_items
+          %li.home
+            %a{href: url('/')}
+              %div= 'home'
+          %li.navigation_item{class: "#{'selected' if @item == 1}"}
+            %a{href: url('/our_story')} OUR STORY
+          %li.navigation_item{class: "#{'selected' if @item == 2}"}
+            %a{href: url('/proposal')} THE PORPOSAL
+          %li.navigation_item{class: "#{'selected' if @item == 3}"}
+            %a{href: url('/our_bio')} OUR BIO
+          %li.navigation_item{class: "#{'selected' if @item == 4}"}
+            %a{href: url('/wedding_party')} GROOMSMEN/BRIDESMAIDS
+          %li.navigation_item{class: "#{'selected' if @item == 5}"}
+            %a{href: url('/venue')} CEREMONY & VENUE INFO
 
       = yield

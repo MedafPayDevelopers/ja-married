@@ -1,33 +1,34 @@
 %div.main_content.white
   %h3= "GROOMSMEN / BRIDESMAIDS"
 
-  %div.bio_box
+  %div.bio_box.pull-left.col-md-4
 
     %a.left_navigate_link.groomsmen.text-hide{href: 'javascript:void(0);'}
       %div= 'left'
 
-    = partial(:"partials/bio", locals: { name: 'michael', class_names: 'pull-left', description: "<p>Michael is my younger brother by one year. Which means he is the obligatory best man. I am just kidding. He and I totally wants him to be there on our big day.</p><p>We both moved here together, as family ought to do fifteen years ago. We grew up together. And which our paths and interest branch out separately, we could always depend on each other. He tried to go his separate way during university. But in the end he still followed in my foot steps in becoming another computer jockey.</p><p>We've tackled an overgrown lawn together. Ate nothing but curry and minced pork for two years straight together.</p>"})
-
-    = partial(:"partials/bio", locals: { name: 'peter', class_names: 'pull-left hidden', description: "<p>I met Peter after graduating and entering the same company. After moving around the company a bit. Eventually we started working together. He was the project manager to my applications developer.</p><p>We were the most dependable morning coffee buddy.There were so many messages between us that mostly looked life. Dude, where the hell are you. I am seriously gonna die if I don't get some coffee soon. Hold on. I am on my last bus and five minutes away. Trying chewing on your seat cover or something.</p><p>It was great fun working with Peter. He was good natured and you could always strike up an easy conversation with him about anything. Because of him good days at work are that much sweeter and bad days that much easier.</p>"})
-
-    = partial(:"partials/bio", locals: { name: 'tam', class_names: 'pull-left hidden', description: "<p>I also met Tam at work about three years ago. He was one of the earliest new colleagues during our expansion.</p><p>Because of that, we've worked together during some very drastic changes at work. Tam is a great colleague as well as someone to simply hang out with. We've spent a few late nights at work together chasing after deadlines and chomping on company supplied pizza.</p><p>About a year ago Tam left on paternity leave. But we still kept in touch, hang out, and work on little side projects.</p>"})
-
     %a.right_navigate_link.groomsmen.text-hide{href: 'javascript:void(0);'}
       %div= 'right'
 
-  %div.bio_box
+    = partial(:"partials/bio", locals: { name: 'michael', class_names: '', description: "<p>Michael is my younger brother by one year. Which means he is the obligatory best man. I am just kidding. He and I totally wants him to be there on our big day.</p><p>We both moved here together, as family ought to do fifteen years ago. We grew up together. And which our paths and interest branch out separately, we could always depend on each other. He tried to go his separate way during university. But in the end he still followed in my foot steps in becoming another computer jockey.</p><p>We've tackled an overgrown lawn together. Ate nothing but curry and minced pork for two years straight together.</p>"})
+
+    = partial(:"partials/bio", locals: { name: 'peter', class_names: ' hidden', description: "<p>I met Peter after graduating and entering the same company. After moving around the company a bit. Eventually we started working together. He was the project manager to my applications developer.</p><p>We were the most dependable morning coffee buddy.There were so many messages between us that mostly looked life. Dude, where the hell are you. I am seriously gonna die if I don't get some coffee soon. Hold on. I am on my last bus and five minutes away. Trying chewing on your seat cover or something.</p><p>It was great fun working with Peter. He was good natured and you could always strike up an easy conversation with him about anything. Because of him good days at work are that much sweeter and bad days that much easier.</p>"})
+
+    = partial(:"partials/bio", locals: { name: 'tam', class_names: ' hidden', description: "<p>I also met Tam at work about three years ago. He was one of the earliest new colleagues during our expansion.</p><p>Because of that, we've worked together during some very drastic changes at work. Tam is a great colleague as well as someone to simply hang out with. We've spent a few late nights at work together chasing after deadlines and chomping on company supplied pizza.</p><p>About a year ago Tam left on paternity leave. But we still kept in touch, hang out, and work on little side projects.</p>"})
+
+  %div.bio_box.pull-right.col-md-4{style: 'margin-right: 80px;'}
 
     %a.left_navigate_link.bridesmaids.text-hide{href: 'javascript:void(0);'}
       %div= 'left'
 
-    = partial(:"partials/bio", locals: { name: 'maya', class_names: 'pull-right', description: "<p>Maya is my baby sister. Even though, she is youngest in the family but I still feel that she is the one that would always watch my back. We flight, we cry and we laugh together. She is the one always there for me.</p><p>I am lucky to have her as my maid of honor here with me on my big day. Since she can’t really say no to me on this. Maybe this is the last time that I am going to make her work hard on my one of my chapters in life. But who knows?</p>"})
-
-    = partial(:"partials/bio", locals: { name: 'gladys', class_names: 'pull-right hidden', description: "<p>I met Gladys 8 years ago working in Swarovski. I am lucky to be one of Robson Swarovski Family member with her. We don’t need to hang out everyday but I always know where to find her when I need her. In the past 8 years, we grew from colleagues to friend and  then from a friend to be one of important people in my life.</p><p>I am lucky to have her a one of my bridesmaid because I know if someone (including myself) lost control, I have her to help clean up the mess.</p>"})
-
-    = partial(:"partials/bio", locals: { name: 'ivy', class_names: 'pull-right hidden', description: "<p>I know Ivy 3 years ago by friends gathering party. She always have the angle smile and polite. She is such sweetheart girl and always think about her friends. When I think who can be my bridesmaids, her name just pop out my head right away.</p><p>I am happy to have her to be one of my bridesmaid because I know she is so detail oriented and she can help me a lot for my wedding planning.</p>"})
-
     %a.right_navigate_link.bridesmaids.text-hide{href: 'javascript:void(0);'}
       %div= 'right'
+
+    = partial(:"partials/bio", locals: { name: 'maya', class_names: '', description: "<p>Maya is my baby sister. Even though, she is youngest in the family but I still feel that she is the one that would always watch my back. We flight, we cry and we laugh together. She is the one always there for me.</p><p>I am lucky to have her as my maid of honor here with me on my big day. Since she can’t really say no to me on this. Maybe this is the last time that I am going to make her work hard on my one of my chapters in life. But who knows?</p>"})
+
+    = partial(:"partials/bio", locals: { name: 'gladys', class_names: ' hidden', description: "<p>I met Gladys 8 years ago working in Swarovski. I am lucky to be one of Robson Swarovski Family member with her. We don’t need to hang out everyday but I always know where to find her when I need her. In the past 8 years, we grew from colleagues to friend and  then from a friend to be one of important people in my life.</p><p>I am lucky to have her a one of my bridesmaid because I know if someone (including myself) lost control, I have her to help clean up the mess.</p>"})
+
+    = partial(:"partials/bio", locals: { name: 'ivy', class_names: ' hidden', description: "<p>I know Ivy 3 years ago by friends gathering party. She always have the angle smile and polite. She is such sweetheart girl and always think about her friends. When I think who can be my bridesmaids, her name just pop out my head right away.</p><p>I am happy to have her to be one of my bridesmaid because I know she is so detail oriented and she can help me a lot for my wedding planning.</p>"})
+
 
 :javascript
   $(document).ready(function() {

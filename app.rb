@@ -13,30 +13,42 @@ enable :partial_underscores
 enable :sessions
 
 get '/' do
+  @background = 'green'
   haml :index
 end
 
 get '/our_story' do
+  @item = 1
+  @background = 'green'
   haml :our_story
 end
 
 get '/proposal' do
+  @item = 2
+  @background = 'green'
   haml :proposal
 end
 
 get '/our_bio' do
+  @item = 3
+  @background = 'white'
   haml :our_bio
 end
 
-get '/venue' do
-  haml :venue
-end
-
 get '/wedding_party' do
+  @item = 4
+  @background = 'white'
   haml :wedding_party
 end
 
+get '/venue' do
+  @item = 5
+  @background = 'yellow'
+  haml :venue
+end
+
 get '/rsvp' do
+  @background = 'white'
   haml :rsvp
 end
 
