@@ -59,8 +59,13 @@ post '/rsvp_action' do
   guest_id = guest_params.delete('id')
   guest_name = guest_params.delete('name')
 
-  guest = Guest.find_by_id(guest_id)
-  guest.update_attributes(guest_params)
+  @guest = Guest.find_by_id(guest_id)
+  @guest.update_attributes(guest_params)
+
+  Pony.mail to: 'irregular.profit@gmail.com',
+            from: 'irregular.profit@gmail.com',
+            subject: "Wedding RRSP: #{guest.name}",
+            body: haml(:email)
 
   redirect '/rsvp', notice: 'Thank you for RSVPing! We look forward to seeing you.'
 end

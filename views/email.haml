@@ -1,0 +1,6 @@
+= "#{@guest.name} has RRSPed"
+
+= "#{@guest.name} can have +1" if @guest.can_plus_one
+= "#{@guest.name} is bringing +1" if @guest.has_plus_one
+
+= "#{@guest.name}'s +1 is #{@guest.plus_one_name}"

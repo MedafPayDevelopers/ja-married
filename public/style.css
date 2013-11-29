@@ -210,7 +210,7 @@ div.venue_info h4 {
 
 
 div.new_rsvp_form {
-  width: 40%;
+  width: 50%;
   padding: 20px;
   margin: 20% 35%;
   background-color:rgba(40,40,40,0.6);
@@ -259,14 +259,25 @@ div.new_rsvp_form #can_plus_one .checkbox {
 }
 
 div.new_rsvp_form #can_plus_one {
-  margin-left: 86%;
+  margin-left: 80%;
 }
 
 div.new_rsvp_form #submit_form {
-  margin-left: 75%;
+  margin-left: 65%;
   margin-top: 5%;
 }
 
+div.new_rsvp_form div.form-group {
+  width: 100%;
+}
+
+div.new_rsvp_form input#guest_name {
+  width: 80%;
+}
+
+div.new_rsvp_form input#guest_plus_one_name {
+  width: 76%;
+}
 
 div.new_rsvp_form h3 {
   margin: 0 !important;
