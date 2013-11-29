@@ -7,6 +7,7 @@ require 'sinatra/form_helpers'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'sinatra/partial'
+require 'pony'
 
 set :haml, format: :html5
 enable :partial_underscores
@@ -60,14 +61,29 @@ post '/rsvp_action' do
   guest_name = guest_params.delete('name')
 
   @guest = Guest.find_by_id(guest_id)
-  @guest.update_attributes(guest_params)
+  @guest.attributes = guest_params
+  @guest.rsvp_ed = true
 
-  Pony.mail to: 'irregular.profit@gmail.com',
-            from: 'irregular.profit@gmail.com',
-            subject: "Wedding RRSP: #{guest.name}",
-            body: haml(:email)
+  if @guest.save
+    # Pony.mail({to: 'irregular.profit@gmail.com',
+    #            from: 'irregular.profit@gmail.com',
+    #            subject: "Wedding RRSP: #{@guest.name}",
+    #            body: haml(:email),
+    #            via: :smtp,
+    #            via_options: {
+    #              address:              'smtp.gmail.com',
+    #              port:                 '465',
+    #              enable_starttls_auto: true,
+    #              user_name:            'irregular.profit',
+    #              password:             'uqjseayluuzmoojy',
+    #              authentication:       :plain,
+    #              domain:               "localdomain"
+    # }})
 
-  redirect '/rsvp', notice: 'Thank you for RSVPing! We look forward to seeing you.'
+    redirect '/rsvp', notice: 'Thank you for RSVPing! We look forward to seeing you.'
+  else
+    redirect '/rsvp', error: "Something is wrong :(. We weren't able to RSVP you. Please call Jimmy."
+  end
 end
 
 get '/guests.?:format?' do

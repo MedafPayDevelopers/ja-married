@@ -15,3 +15,4 @@ gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
 gem 'sinatra-partial'
 gem 'pony'
+

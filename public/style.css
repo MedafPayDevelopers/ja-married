@@ -75,7 +75,11 @@ li.home {
   margin-right: 2.5%;
 }
 
-
+img.home_page_banner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
