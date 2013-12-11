@@ -128,7 +128,7 @@ div.our_bio_box {
   margin-left: 40px;
   margin-right: 40px;
   padding: 15px;
-  height: 550px;
+  height: 570px;
   -moz-box-shadow: 0 0 10px 5px #eee;
   -webkit-box-shadow: 0 0 10px 5px#eee;
   box-shadow: 0 0 10px 5px #eee;
@@ -139,7 +139,7 @@ div.bio_box {
 }
 
 div.bio_box div.our_bio_box {
-  height: 400px;
+  min-height: 300px;
   margin-top: 70px;
   margin-left: 40px;
   margin-right: 0px;
