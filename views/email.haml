@@ -1,6 +1,9 @@
-= "#{@guest.name} has RRSPed"
+%p= "#{@guest.name} has RRSPed"
 
-= "#{@guest.name} can have +1" if @guest.can_plus_one
-= "#{@guest.name} is bringing +1" if @guest.has_plus_one
+%p= "#{@guest.name} can have +1" if @guest.can_plus_one
 
-= "#{@guest.name}'s +1 is #{@guest.plus_one_name}"
+- if @guest.has_plus_one
+  %p= "#{@guest.name} is bringing +1"
+  %p= "#{@guest.name}'s +1 is #{@guest.plus_one_name}"
+
+%p= "Still #{@num_unconfimed_guests} guests have not confirm yet."

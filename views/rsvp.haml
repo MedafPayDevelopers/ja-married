@@ -41,7 +41,13 @@
         },
         minLength: 2,
         select: function( event, ui ) {
+
           $("input#guest_id").val(ui.item.id);
+          $("input#guest_plus_one_name").val('');
+          $("input#guest_has_plus_one").prop('checked', false);
+          $("div#can_plus_one").addClass('hidden');
+          $("div#plus_one_name").addClass('hidden');
+
           if (ui.item.plus_one) {
             $("div#can_plus_one").removeClass('hidden');
           }
