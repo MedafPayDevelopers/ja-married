@@ -6,3 +6,12 @@ development:
   username: jimmy
   password:
   host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ja_married_dev
+  pool: 5
+  username: jimmy
+  password:
+  host: localhost
